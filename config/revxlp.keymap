@@ -23,85 +23,12 @@
 };
 
 / {
-    tap_dances {
-    	shifty: shift_caps_word {
-		compatible = "zmk,behavior-tap-dance";
-		#binding-cells = <0>;
-		tapping-term-ms = <150>;
-		bindings = <&kp LSHFT>, <&caps_word>;
-	};
-    };
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
 	tri {
 	    if-layers = <NUM_L NAV_L>;
 	    then-layer = <MED_L>;
         };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-	l_curly_bracket {
-	    timeout-ms = <50>;
-            key-positions = <2 14>;
-            bindings = <&kp LS(LBKT)>;
-	    layers = <NUM_L>;
-	};
-
-	r_curly_bracket {
-	    timeout-ms = <50>;
-            key-positions = <4 16>;
-            bindings = <&kp LS(RBKT)>;
-	    layers = <NUM_L>;
-	};
-
-	lbracket {
-	    timeout-ms = <50>;
-            key-positions = <14 26>;
-            bindings = <&kp LBKT>;
-	    layers = <NUM_L>;
-	};
-
-	rbracket {
-	    timeout-ms = <50>;
-            key-positions = <16 28>;
-            bindings = <&kp RBKT>;
-	    layers = <NUM_L>;
-	};
-
-	ques_mark_combo {
-	    timeout-ms = <50>;
-            key-positions = <21 33>;
-            bindings = <&kp LS(FSLH)>;
-	};
-
-	bslash_combo {
-	    timeout-ms = <50>;
-            key-positions = <10 22>;
-            bindings = <&kp BSLH>;
-	};
-
-	fslash_combo {
-	    timeout-ms = <50>;
-            key-positions = <22 34>;
-            bindings = <&kp FSLH>;
-	};
-
-	bootloader_combo {
-	    timeout-ms = <50>;
-            key-positions = <5 6>;
-            bindings = <&bootloader>;
-	    layers = <MED_L>;
-	};
-
-	gui_combo {
-	    timeout-ms = <50>;
-            key-positions = <16 19>;
-            bindings = <&kp LGUI>;
-	    layers = <MED_L>;
-	};
     };
 
     keymap {
