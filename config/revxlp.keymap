@@ -27,8 +27,8 @@
         compatible = "zmk,conditional-layers";
 
         tri {
-            if-layers = <NUM_L NAV_L>;
-            then-layer = <MED_L>;
+            if-layers = <1 1>;
+            then-layer = <2>;
         };
     };
 
@@ -39,28 +39,28 @@
             timeout-ms = <50>;
             key-positions = <2 14>;
             bindings = <&kp LS(LBKT)>;
-            layers = <NUM_L>;
+            layers = <1>;
         };
 
         r_curly_bracket {
             timeout-ms = <50>;
             key-positions = <4 16>;
             bindings = <&kp LS(RBKT)>;
-            layers = <NUM_L>;
+            layers = <1>;
         };
 
         lbracket {
             timeout-ms = <50>;
             key-positions = <14 26>;
             bindings = <&kp LBKT>;
-            layers = <NUM_L>;
+            layers = <1>;
         };
 
         rbracket {
             timeout-ms = <50>;
             key-positions = <16 28>;
             bindings = <&kp RBKT>;
-            layers = <NUM_L>;
+            layers = <1>;
         };
 
         ques_mark_combo {
@@ -85,14 +85,14 @@
             timeout-ms = <50>;
             key-positions = <5 6>;
             bindings = <&bootloader>;
-            layers = <MED_L>;
+            layers = <2>;
         };
 
         gui_combo {
             timeout-ms = <50>;
             key-positions = <16 19>;
             bindings = <&kp LGUI>;
-            layers = <MED_L>;
+            layers = <2>;
         };
     };
 
@@ -104,25 +104,17 @@
 
         #ifdef QWERTY_BASE
 
-        qwerty_layer {
+        default_layer {
             bindings = <
-&none  &kp Q  &kp W  &kp E                   &kp R      &kp T    &kp Y      &kp U      &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S  &kp D                   &kp F      &kp G    &kp H      &kp J      &kp K      &kp L    &kp QUOT  &none
-&none  &kp Z  &kp X  &kp C                   &kp V      &kp B    &kp N      &kp M      &kp COMMA  &kp DOT  &kp SEMI  &none
-                     &kp C_BACKLIGHT_TOGGLE  &mo NAV_L  &shifty  &kp SPACE  &mo NUM_L  &none
+&none  &kp Q  &kp W  &kp E                   &kp R  &kp T    &kp Y      &kp U  &kp I      &kp O    &kp P     &none
+&none  &kp A  &kp S  &kp D                   &kp F  &kp G    &kp H      &kp J  &kp K      &kp L    &kp QUOT  &none
+&none  &kp Z  &kp X  &kp C                   &kp V  &kp B    &kp N      &kp M  &kp COMMA  &kp DOT  &kp SEMI  &none
+                     &kp C_BACKLIGHT_TOGGLE  &mo 1  &shifty  &kp SPACE  &mo 2  &none
             >;
         };
 
         #else
 
-        colemak_dhm_layer {
-            bindings = <
-&none  &kp Q  &kp W  &kp F                   &kp P      &kp B    &kp J      &kp L      &kp U      &kp Y    &kp QUOT  &none
-&none  &kp A  &kp R  &kp S                   &kp T      &kp G    &kp M      &kp N      &kp E      &kp I    &kp O     &none
-&none  &kp Z  &kp X  &kp C                   &kp D      &kp V    &kp K      &kp H      &kp COMMA  &kp DOT  &kp SEMI  &none
-                     &kp C_BACKLIGHT_TOGGLE  &mo NAV_L  &shifty  &kp SPACE  &mo NUM_L  &none
-            >;
-        };
 
         #endif
 
