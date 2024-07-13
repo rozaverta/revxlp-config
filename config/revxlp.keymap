@@ -28,8 +28,8 @@
         compatible = "zmk,conditional-layers";
 
         tri {
-            if-layers = <1 1>;
-            then-layer = <2>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 
