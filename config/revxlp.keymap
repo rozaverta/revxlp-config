@@ -46,8 +46,24 @@
 
         grave {
             bindings = <&kp GRAVE>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             layers = <0>;
+        };
+
+        quote {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
+
+        left-square-bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <8 9>;
+        };
+
+        right-square-bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <9 10>;
         };
     };
 
