@@ -35,73 +35,19 @@
     cond_layers {
         compatible = "zmk,conditional-layers";
 
-        tri {
+        tri-layer {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <4>;
         };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        l_curly_bracket {
-            timeout-ms = <50>;
-            key-positions = <2 14>;
-            bindings = <&kp LS(LBKT)>;
-            layers = <1>;
-        };
-
-        r_curly_bracket {
-            timeout-ms = <50>;
-            key-positions = <4 16>;
-            bindings = <&kp LS(RBKT)>;
-            layers = <1>;
-        };
-
-        lbracket {
-            timeout-ms = <50>;
-            key-positions = <14 26>;
-            bindings = <&kp LBKT>;
-            layers = <1>;
-        };
-
-        rbracket {
-            timeout-ms = <50>;
-            key-positions = <16 28>;
-            bindings = <&kp RBKT>;
-            layers = <1>;
-        };
-
-        ques_mark_combo {
-            timeout-ms = <50>;
-            key-positions = <21 33>;
-            bindings = <&kp LS(FSLH)>;
-        };
-
-        bslash_combo {
-            timeout-ms = <50>;
-            key-positions = <10 22>;
-            bindings = <&kp BSLH>;
-        };
-
-        fslash_combo {
-            timeout-ms = <50>;
-            key-positions = <22 34>;
-            bindings = <&kp FSLH>;
-        };
-
-        bootloader_combo {
-            timeout-ms = <50>;
-            key-positions = <5 6>;
-            bindings = <&bootloader>;
-            layers = <2>;
-        };
-
-        gui_combo {
-            timeout-ms = <50>;
-            key-positions = <16 19>;
-            bindings = <&kp LGUI>;
-            layers = <2>;
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 1>;
+            layers = <0>;
         };
     };
 
